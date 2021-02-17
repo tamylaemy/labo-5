@@ -7,6 +7,9 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		background-color: #005;
+		position: absolute;
+		width: 100%;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -69,12 +72,34 @@
 	}
 }
 
+.menu-toggle {
+	padding: 0rem;
+	border: 0;
+	margin-left: 3rem;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background-color: #f8f8f8;
+}
+
+.menu-toggle:focus {
+	outline: 1px solid #fff;
+	outline-offset: -4px;
+}
+
+.menu-toggle:focus {
+	transform: scale(0.99);
+}
+
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
 
+/* VERSION TABLETTE */
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
@@ -83,6 +108,10 @@
 
 	.main-navigation ul {
 		display: flex;
+		height: 2rem;
+		justify-content: space-around;
+		align-items: center;
+		position: static;
 	}
 }
 
