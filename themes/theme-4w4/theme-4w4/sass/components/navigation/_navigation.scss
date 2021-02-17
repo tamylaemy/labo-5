@@ -71,10 +71,14 @@
 	.current-menu-ancestor > a {
 	}
 }
+/* ------------------------------------------------------------------
+Bouton burger 
+---------------------------------------------------------------------*/
 
 .menu-toggle {
 	padding: 0rem;
 	border: 0;
+	transition: transform .20s ;
 	margin-left: 3rem;
 }
 
@@ -88,10 +92,13 @@
 	outline-offset: -4px;
 }
 
-.menu-toggle:focus {
+.menu-toggle:active {
 	transform: scale(0.99);
 }
 
+.main-navigation.toggled .menu-toggle  {
+	transform: rotate(90deg);
+}
 
 /* Small menu. */
 .menu-toggle,

@@ -47,3 +47,29 @@ a {
 		}
 	}
 } 
+
+.site-title {
+
+	a {
+		color: $color__linktitle;
+
+		&:visited {
+			color: $color__linktitle-visited;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__linktitle-hover;
+		}
+
+		&:focus {
+			outline: thin dotted;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+} 
