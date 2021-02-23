@@ -662,6 +662,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -788,6 +792,7 @@ Bouton burger
     justify-content: space-around;
     align-items: center;
     position: static;
+    width: 100vw;
   }
 }
 
@@ -1063,10 +1068,9 @@ body.home::after {
         } */
 }
 
-#page {
-  margin: 0 2rem 0 2rem;
-}
-
+/* #page {
+    margin: 0 2rem 0 2rem;
+} */
 .site-title {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
@@ -1099,6 +1103,7 @@ site-description {
   display: flex;
   width: 300vw;
   height: 20vh;
+  transition: transform .5s;
 }
 
 .carrousel div {
