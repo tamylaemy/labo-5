@@ -32,3 +32,26 @@ body {
 .site-branding, #primary, #colophon {
 	margin-left: 3rem;
 }
+
+#primary {
+	display: flex;
+	justify-content: center;
+
+	h1 {
+		font-size: 3em;
+		margin: 0.2em;
+		font-family: $font__main;
+	}	
+
+	.wp-block-column {
+		font-family: $font_title;
+
+		ul {
+			margin: 0;
+		}
+		img {
+			border: 4px solid lightcoral;
+			box-shadow: 2px 2px 2px rgb(185, 72, 72);
+		}
+	}
+}

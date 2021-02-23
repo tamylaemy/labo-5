@@ -692,6 +692,30 @@ body {
   margin-left: 3rem;
 }
 
+#primary {
+  display: flex;
+  justify-content: center;
+}
+
+#primary h1 {
+  font-size: 3em;
+  margin: 0.2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+#primary .wp-block-column {
+  font-family: "Montserrat", sans-serif;
+}
+
+#primary .wp-block-column ul {
+  margin: 0;
+}
+
+#primary .wp-block-column img {
+  border: 4px solid lightcoral;
+  box-shadow: 2px 2px 2px #b94848;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
