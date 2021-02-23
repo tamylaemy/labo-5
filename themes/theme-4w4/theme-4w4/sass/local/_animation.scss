@@ -1,0 +1,29 @@
+.site-title {
+  animation: anim-entete 1.5s both cubic-bezier(.43, 1.06, .97, 1.1);
+}
+
+@keyframes anim-entete {
+  0%{transform: translateY(-200px);}
+  100%{transform: translateY(0);}
+}
+
+
+.site-description {
+  animation: anim-description 1.5s both cubic-bezier(.43, 1.06, .97, 1.1);
+}
+
+@keyframes anim-description {
+  0%{transform: translateX(500px);}
+  100%{transform: translateY(0);}
+}
+
+#primary {
+  animation: anim-page 2s both ease-in-out;
+}
+
+
+
+@keyframes anim-page {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}

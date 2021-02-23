@@ -49,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #Local
 	- Accueil
 	- Carrousel
+	- Animation
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1156,5 +1157,46 @@ body.home::after {
 
 .carrousel div:nth-of-type(3) {
   background-color: palevioletred;
+}
+
+/* Local/animation
+--------------------------------------------- */
+.site-title {
+  animation: anim-entete 1.5s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
+}
+
+@keyframes anim-entete {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.site-description {
+  animation: anim-description 1.5s both cubic-bezier(0.43, 1.06, 0.97, 1.1);
+}
+
+@keyframes anim-description {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#primary {
+  animation: anim-page 2s both ease-in-out;
+}
+
+@keyframes anim-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
