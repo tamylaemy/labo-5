@@ -44,6 +44,31 @@
 				<p class="site-description"><?php echo $theme_4w4_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+		<section class="carrousel">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+		</section>
+		<button id='un'> 1 </button>
+		<button id='deux'> 2 </button>
+		<button id='trois'> 3 </button>
+
+		<script>
+			let bout1 = document.getElementById('un');
+			console.log(bout1.id);
+
+			bout1.addEventListener('mousedown', function() {
+
+			})
+
+			bout2.addEventListener('mousedown', function() {
+				
+			})
+
+			bout3.addEventListener('mousedown', function() {
+				
+			})
+		</script>
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32"></button>

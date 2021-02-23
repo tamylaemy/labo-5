@@ -4,7 +4,7 @@ body {
 }
 
 body.home {
-    background-color: rgb(40, 190, 228);
+    background-color: rgb(241, 180, 89);
 }
 
 body.home::after {
@@ -18,7 +18,7 @@ body.home::after {
     right: 0;
 
     z-index: -1;
-    clip-path: polygon(100% 66%, 72% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     background-color: #fff;
         /* @include media-desktop {
             clip-path: polygon(89% 0, 100% 0, 100% 100%, 64% 100%);

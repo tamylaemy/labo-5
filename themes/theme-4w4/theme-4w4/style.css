@@ -1035,7 +1035,7 @@ Bouton burger
   margin-bottom: 1.5em;
 }
 
-/* Local
+/* Local/accueil
 --------------------------------------------- */
 body {
   margin: 0;
@@ -1043,7 +1043,7 @@ body {
 }
 
 body.home {
-  background-color: #28bee4;
+  background-color: #f1b459;
 }
 
 body.home::after {
@@ -1056,7 +1056,7 @@ body.home::after {
   left: 0;
   right: 0;
   z-index: -1;
-  clip-path: polygon(100% 66%, 72% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   background-color: #fff;
   /* @include media-desktop {
             clip-path: polygon(89% 0, 100% 0, 100% 100%, 64% 100%);
@@ -1091,5 +1091,32 @@ site-description {
 
 .accueil ul {
   list-style-type: none;
+}
+
+/* Local/carrousel
+--------------------------------------------- */
+.carrousel {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+}
+
+.carrousel div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel div:nth-of-type(1) {
+  background-color: palegoldenrod;
+}
+
+.carrousel div:nth-of-type(2) {
+  background-color: palegreen;
+}
+
+.carrousel div:nth-of-type(3) {
+  background-color: palevioletred;
 }
 /*# sourceMappingURL=style.css.map */
