@@ -693,23 +693,13 @@ body {
   margin-left: 3rem;
 }
 
-#primary {
-  display: flex;
-  justify-content: center;
-}
-
 #primary h1 {
   font-size: 3em;
-  margin: 0.2em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #primary .wp-block-column {
   font-family: "Montserrat", sans-serif;
-}
-
-#primary .wp-block-column ul {
-  margin: 0;
 }
 
 #primary .wp-block-column img {
@@ -736,6 +726,7 @@ body {
   background-color: #f37657;
   position: absolute;
   width: 100%;
+  z-index: 10;
 }
 
 .main-navigation ul ul {
@@ -744,7 +735,7 @@ body {
   position: absolute;
   top: 100%;
   left: -999em;
-  z-index: 99999;
+  z-index: 10;
 }
 
 .main-navigation ul ul ul {
@@ -822,6 +813,17 @@ Bouton burger
     align-items: center;
     position: static;
     width: 100vw;
+  }
+  .main-navigation ul ul {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: small;
+    margin: 0;
   }
 }
 

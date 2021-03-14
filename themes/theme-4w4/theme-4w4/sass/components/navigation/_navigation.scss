@@ -11,6 +11,7 @@
 		background-color: rgb(243, 118, 87);
 		position: absolute;
 		width: 100%;
+		z-index: 10;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -18,7 +19,7 @@
 			position: absolute;
 			top: 100%;
 			left: -999em;
-			z-index: 99999;
+			z-index: 10;
 
 			ul {
 				left: -999em;
@@ -120,7 +121,20 @@ Bouton burger
 		align-items: center;
 		position: static;
 		width: 100vw;
+	
+		ul {
+			position: absolute;
+			width: 200px;
+			height: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			font-size: small;
+			margin: 0;
+		}
 	}
+
 }
 
 .comment-navigation,
