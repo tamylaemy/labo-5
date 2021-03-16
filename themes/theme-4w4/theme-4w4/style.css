@@ -985,7 +985,7 @@ Bouton burger
   display: block;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
 /* Jetpack infinite scroll
@@ -1131,6 +1131,30 @@ body.home::after {
 
 .accueil ul {
   list-style-type: none;
+}
+
+.home .cours {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .cours article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #aaa;
+}
+
+.home .cours article p {
+  margin: .3rem;
+  font-size: 1rem;
+}
+
+.home .cours article a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Local/carrousel

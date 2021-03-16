@@ -22,6 +22,7 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
+			<section class="cours">
 			<?php
 			/* Start the Loop */
             $precedent = 0;
@@ -64,11 +65,10 @@ get_header();
 
 				<p> <?php // echo  $typeCours . " - " . $session . " - " . $titre; ?> </p>
 				<p> <?php // echo $resume; ?> </p>
-				<?php
-
-			endwhile;
-		endif;
-		?>
+		
+		<?php endwhile; ?>
+		</section> <!-- .cours section -->
+		<?php endif; ?>
 
 	</main><!-- #main -->
 
