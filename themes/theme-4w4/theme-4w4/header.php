@@ -58,7 +58,12 @@
 		<?php endif ?>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32"></button>
+			<section id="burger" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<!-- <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32"> -->
+				<div></div>
+				<div></div>
+				<div class='ouvrirX3'></div>
+		</section>
 			<?php
 			wp_nav_menu(
 				array(

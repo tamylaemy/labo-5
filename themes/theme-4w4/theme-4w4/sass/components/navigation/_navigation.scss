@@ -1,6 +1,6 @@
 .main-navigation {
 	display: block;
-	width: 100%;
+	width: 100vw;
 	font-family: $font_title;
 
 	ul {
@@ -79,14 +79,16 @@ Bouton burger
 .menu-toggle {
 	padding: 0rem;
 	border: 0;
-	transition: transform .20s ;
+	// transition: transform .20s ;
 	margin-left: 3rem;
 }
 
+/*
 .menu-toggle:hover,
 .menu-toggle:focus {
 	background-color: #f8f8f8;
 }
+*/
 
 .menu-toggle:focus {
 	outline: 1px solid #fff;
@@ -97,9 +99,9 @@ Bouton burger
 	transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle  {
+/* .main-navigation.toggled .menu-toggle  {
 	transform: rotate(90deg);
-}
+} */
 
 /* Small menu. */
 .menu-toggle,
