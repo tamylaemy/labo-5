@@ -2,6 +2,7 @@
     display: flex;
     width: 300vw;
     height: 20vh;
+    margin-top: 2em;
     transition: transform .5s;
 
     div {
@@ -11,15 +12,55 @@
         justify-content: center;
 
         &:nth-of-type(1){
-            background-color: palegoldenrod;
+            background-color: rgb(235, 230, 182);
         }
         &:nth-of-type(2){
-            background-color: palegreen;
+            background-color: rgb(167, 233, 167);
         }
         &:nth-of-type(3){
-            background-color: palevioletred;
+            background-color: rgb(221, 136, 164);
         }
         
     }
 }
+
+.boutons{
+    display: flex;
+    justify-content: center;
+    padding: 0.2em;
+    // background-color: $color__linkmenu;
+
+   button {
+        margin: 0.4em;
+        border-radius: 50%;
+        padding: 16px 20px;
+        text-decoration: none;
+        background-color: white;
+        outline: none;
+        cursor: pointer;
+        transition-duration: 0.6s;
+    }
+
+    
+    .un:hover {
+        background-color:  rgb(235, 230, 182);
+        color: white;
+        border: none;
+    }
+    
+    .deux:hover {
+        background-color: lightgreen;
+        color: white;
+        border: none;
+    }
+    
+    
+    .trois:hover {
+        background-color: lightpink;
+        color: white;
+        border: none;
+    
+    }
+}
+
 

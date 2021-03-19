@@ -7,7 +7,6 @@
   100%{transform: translateY(0);}
 }
 
-
 .site-description {
   animation: anim-description 1.5s both cubic-bezier(.43, 1.06, .97, 1.1);
 }
@@ -21,9 +20,16 @@
   animation: anim-page 2s both ease-in-out;
 }
 
-
-
 @keyframes anim-page {
   0%{opacity: 0;}
   100%{opacity: 1;}
+}
+
+button {
+  animation: anim-boutons 1.5s both ease-in;
+}
+
+@keyframes anim-boutons {
+  0%{transform: translateX(-500px);}
+  100%{transform: translateY(0);}
 }

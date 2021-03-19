@@ -18,9 +18,11 @@ get_header();
 				<div>2</div>
 				<div>3</div>
 		</section>
-		<button id='un'> 1 </button>
-		<button id='deux'> 2 </button>
-		<button id='trois'> 3 </button>
+		<section class="boutons">
+			<button id='un' class='un'> 1 </button>
+			<button id='deux' class='deux'> 2 </button>
+			<button id='trois' class='trois'> 3 </button>
+		</section>
 		<?php endif ?>
 
 		<?php if ( have_posts() ) : ?>
