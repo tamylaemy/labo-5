@@ -62,24 +62,31 @@ body.home::after {
     }
 }
 
-.home .cours {
+.liste-cours {
     display: flex;
     flex-direction: column;
 
-    article {
+    section {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid #aaa;
-        p {
-            margin: .3rem;
-            font-size: 1rem;
-        }
-        a {
-            font-size: 2rem;
-            font-weight: bold;
-            text-decoration: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #aaa;
+            width: 30%;
+            p {
+                margin: .3rem;
+                font-size: 1rem;
+            }
+            a {
+                font-size: 2rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
         }
     }
 

@@ -1129,25 +1129,32 @@ body.home::after {
   list-style-type: none;
 }
 
-.home .cours {
+.liste-cours {
   display: flex;
   flex-direction: column;
 }
 
-.home .cours article {
+.liste-cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.liste-cours section article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #aaa;
+  width: 30%;
 }
 
-.home .cours article p {
+.liste-cours section article p {
   margin: .3rem;
   font-size: 1rem;
 }
 
-.home .cours article a {
+.liste-cours section article a {
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
@@ -1223,7 +1230,7 @@ body.home::after {
 }
 
 /* Local/burger
---------------------------------------------- */
+-------------------------------------------- */
 /* --------------------------------------------------------------------------------------
 Les variables 
 ---------------------------------------------------------------------------------------- */

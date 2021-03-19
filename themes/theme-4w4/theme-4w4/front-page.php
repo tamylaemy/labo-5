@@ -22,51 +22,34 @@ get_header();
 				?>
 			</header><!-- .page-header -->
 
-			<section class="cours">
+			<section class="liste-cours">
 			<?php
 			/* Start the Loop */
-            $precedent = 0;
+            $precedent = "XXXXXX";
 			while ( have_posts() ) :
 				the_post();
-
-				/* if (in_category('web')) {
-					echo "<span>Web</span>";
-				}
-
-				if (in_category('jeu')) {
-					echo "<span>Jeu</span>";
-				}
-
-				echo "<span style='color:crimson'> - " . get_field('type_de_cours') . "</span>"; */
 
                 $titre = get_the_title();
 				$sigle = substr($titre, 0, 7);
 				$nbHeure = substr($titre, -4, 3);
 				$titrePartiel = substr($titre, 8, -6);
                 $session = substr($titre, 4,1);
-
-				// $contenu = get_the_content();
-				// $resume = substr($contenu, 0, 200);
 				$typeCours = get_field('type_de_cours');
-				?>
+				if ($precedent != $typeCours): ?>
+				<?php if ($precedent != "XXXXXX"): ?>
+					</section>
+				<?php endif ?>
 
+			<section>
+				<?php endif ?>
 				<article>
-					<p><?php echo $sigle . " - " . $typeCours; ?></p>
+					<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
 					<a href="<?php echo get_permalink() ?>"><?php echo $titrePartiel; ?></a>
 					<p>Session : <?php echo $session; ?></p>
 				</article>
-
-				<?php
-                /* if ($session != $precedent){
-                    echo '<p>Session : ' . $session . '</p>';
-                }
-				$precedent = $session; */
-				?>
-
-				<p> <?php // echo  $typeCours . " - " . $session . " - " . $titre; ?> </p>
-				<p> <?php // echo $resume; ?> </p>
-		
-		<?php endwhile; ?>
+		<?php 
+			$precedent = $typeCours;
+		endwhile; ?>
 		</section> <!-- .cours section -->
 		<?php endif; ?>
 
