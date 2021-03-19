@@ -14,9 +14,9 @@ get_header();
 	<?php 
 		if (is_front_page()) : ?>
 		<section class="carrousel">
-				<div>1</div>
-				<div>2</div>
-				<div>3</div>
+				<div><p>1</p></div>
+				<div><p>2</p></div>
+				<div><p>3</p></div>
 		</section>
 		<section class="boutons">
 			<button id='un' class='un'> 1 </button>
