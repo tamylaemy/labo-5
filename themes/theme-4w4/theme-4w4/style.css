@@ -1160,6 +1160,10 @@ body.home::after {
   text-decoration: none;
 }
 
+#secondary {
+  display: none;
+}
+
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
