@@ -9,9 +9,19 @@
 
 get_header();
 ?>
-/////////////////////// FRONT-PAGE.PHP
-
 	<main id="primary" class="site-main">
+
+	<?php 
+		if (is_front_page()) : ?>
+		<section class="carrousel">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+		</section>
+		<button id='un'> 1 </button>
+		<button id='deux'> 2 </button>
+		<button id='trois'> 3 </button>
+		<?php endif ?>
 
 		<?php if ( have_posts() ) : ?>
 
