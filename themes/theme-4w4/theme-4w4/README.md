@@ -1,3 +1,6 @@
-Dépot Git : https://github.com/tamylaemy/TP1_4W4.git
+TP1 - 4W4 gr-1
+Par Tamyla Ait-Chellouche
+
+Premier développement d'un site WordPress, comportant une page d'accueil possedant un menu arborescente permettant d'accéder aux différents niveaux du menu. Elle comporte également plusieurs sections et catégories d'articles. Développement d'une simple galerie animée de type carrousel.
 
 GitHub Pages : https://tamylaemy.github.io/TP1_4W4/
