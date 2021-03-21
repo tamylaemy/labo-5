@@ -51,6 +51,7 @@ get_header();
 				<?php if ($precedent != "XXXXXX"): ?>
 					</section>
 				<?php endif ?>
+				<h2><?php echo $typeCours; ?></h2>
 
 			<section>
 				<?php endif ?>
@@ -64,6 +65,7 @@ get_header();
 		endwhile; ?>
 		</section> <!-- .cours section -->
 		<?php endif; ?>
+
 
 	</main><!-- #main -->
 

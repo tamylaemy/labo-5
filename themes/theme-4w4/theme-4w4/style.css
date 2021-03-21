@@ -749,6 +749,8 @@ body {
 
 .main-navigation ul ul a {
   width: 200px;
+  font-size: clamp(0.6rem, -0.875 + 8.333vw, 3rem);
+  margin: 0.5em;
 }
 
 .main-navigation ul li:hover > ul,
@@ -1075,15 +1077,39 @@ body {
   padding: 0;
 }
 
+body.home {
+  height: 500vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body.home #primary {
   margin: 0;
   width: 100vw;
 }
 
+body.home #primary h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 2.5rem);
+  background-color: #e7594f;
+  color: white;
+}
+
+body.home #primary h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 2rem);
+  color: #f0755D;
+  border: 1px dotted black;
+}
+
 body.home::after {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 500vh;
   content: '';
   top: 0;
   bottom: 0;
@@ -1129,12 +1155,20 @@ body.home::after {
   list-style-type: none;
 }
 
+.entry-header {
+  font-size: clamp(0.6rem, -0.875 + 8.333vw, 3rem);
+}
+
+/* ---------------------------------------------------------------------------------------------
+                                Liste des blocs de cours par type
+------------------------------------------------------------------------------------------------*/
 .liste-cours {
   display: flex;
   flex-direction: column;
 }
 
 .liste-cours section {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1146,11 +1180,12 @@ body.home::after {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #aaa;
-  width: 30%;
+  width: 90%;
+  margin: 1%;
 }
 
 .liste-cours section article p {
-  margin: .3rem;
+  margin: .4rem;
   font-size: 1rem;
 }
 
@@ -1158,6 +1193,20 @@ body.home::after {
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  .liste-cours section article {
+    width: 45%;
+    margin: 1%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .liste-cours section article {
+    width: 29%;
+    margin: 1%;
+  }
 }
 
 #secondary {
