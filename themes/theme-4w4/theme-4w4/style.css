@@ -776,12 +776,11 @@ Bouton burger
   margin-left: 3rem;
 }
 
-/*
 .menu-toggle:hover,
 .menu-toggle:focus {
-	background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
-*/
+
 .menu-toggle:focus {
   outline: 1px solid #fff;
   outline-offset: -4px;
@@ -1179,6 +1178,7 @@ body.home::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: #b4f8c9e1;
   border: 1px solid #aaa;
   width: 90%;
   margin: 1%;
@@ -1187,12 +1187,16 @@ body.home::after {
 .liste-cours section article p {
   margin: .4rem;
   font-size: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .liste-cours section article a {
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
+  color: #81e674;
 }
 
 @media (min-width: 800px) {
@@ -1211,6 +1215,17 @@ body.home::after {
 
 #secondary {
   display: none;
+}
+
+#colophon {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+#colophon .site-info a {
+  text-decoration: none;
+  color: #e7594f;
 }
 
 /* Local/carrousel
@@ -1353,7 +1368,7 @@ button {
 }
 
 /* Local/burger
--------------------------------------------- */
+------------------------------------------- */
 /* --------------------------------------------------------------------------------------
 Les variables 
 ---------------------------------------------------------------------------------------- */

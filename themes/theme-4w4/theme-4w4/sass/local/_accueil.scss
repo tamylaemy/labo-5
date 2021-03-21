@@ -107,17 +107,22 @@ body.home::after {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            background-color: $color_articlebackground;
             border: 1px solid #aaa;
             width: 90%;
             margin : 1%;
             p {
                 margin: .4rem;
                 font-size: 1rem;
+                display: flex;
+                justify-content: center;
             }
             a {
+                text-align: center;
                 font-size: 2rem;
                 font-weight: bold;
                 text-decoration: none;
+                color: $color__linkarticle;
             }
         }
 
@@ -140,4 +145,17 @@ body.home::after {
 
 #secondary {
     display: none;
+}
+
+#colophon {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+   .site-info {
+       a {
+       text-decoration: none;
+       color: $color__linktitle-visited;
+       }
+   }
 }
