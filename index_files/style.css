@@ -691,30 +691,18 @@ body {
 */
 .site-branding, #primary, #colophon {
   margin-left: 3rem;
-}
-
-#primary {
-  display: flex;
-  justify-content: center;
+  /* @include desktop {
+		margin-left: 3rem;
+	} */
 }
 
 #primary h1 {
   font-size: 3em;
-  margin: 0.2em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #primary .wp-block-column {
   font-family: "Montserrat", sans-serif;
-}
-
-#primary .wp-block-column ul {
-  margin: 0;
-}
-
-#primary .wp-block-column img {
-  border: 4px solid lightcoral;
-  box-shadow: 2px 2px 2px #b94848;
 }
 
 /*--------------------------------------------------------------
@@ -724,7 +712,7 @@ body {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
+  width: 100vw;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -736,6 +724,7 @@ body {
   background-color: #f37657;
   position: absolute;
   width: 100%;
+  z-index: 10;
 }
 
 .main-navigation ul ul {
@@ -744,7 +733,7 @@ body {
   position: absolute;
   top: 100%;
   left: -999em;
-  z-index: 99999;
+  z-index: 10;
 }
 
 .main-navigation ul ul ul {
@@ -760,6 +749,8 @@ body {
 
 .main-navigation ul ul a {
   width: 200px;
+  font-size: clamp(0.6rem, -0.875 + 8.333vw, 3rem);
+  margin: 0.5em;
 }
 
 .main-navigation ul li:hover > ul,
@@ -782,7 +773,6 @@ Bouton burger
 .menu-toggle {
   padding: 0rem;
   border: 0;
-  transition: transform .20s;
   margin-left: 3rem;
 }
 
@@ -800,10 +790,9 @@ Bouton burger
   transform: scale(0.99);
 }
 
-.main-navigation.toggled .menu-toggle {
-  transform: rotate(90deg);
-}
-
+/* .main-navigation.toggled .menu-toggle  {
+	transform: rotate(90deg);
+} */
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -822,6 +811,17 @@ Bouton burger
     align-items: center;
     position: static;
     width: 100vw;
+  }
+  .main-navigation ul ul {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: small;
+    margin: 0;
   }
 }
 
@@ -983,7 +983,7 @@ Bouton burger
   display: block;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
 /* Jetpack infinite scroll
@@ -1077,21 +1077,44 @@ body {
 }
 
 body.home {
-  background-color: #f1b459;
+  height: 500vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body.home #primary {
+  margin: 0;
+  width: 100vw;
+}
+
+body.home #primary h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 2.5rem);
+  background-color: #e7594f;
+  color: white;
+}
+
+body.home #primary h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 2rem);
+  color: #f0755D;
+  border: 1px dotted black;
 }
 
 body.home::after {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 500vh;
   content: '';
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
-  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-  background-color: #fae7aa;
   /* @include media-desktop {
             clip-path: polygon(89% 0, 100% 0, 100% 100%, 64% 100%);
         } */
@@ -1131,12 +1154,92 @@ body.home::after {
   list-style-type: none;
 }
 
+.entry-header {
+  font-size: clamp(0.6rem, -0.875 + 8.333vw, 3rem);
+}
+
+/* ---------------------------------------------------------------------------------------------
+                                Liste des blocs de cours par type
+------------------------------------------------------------------------------------------------*/
+.liste-cours {
+  display: flex;
+  flex-direction: column;
+}
+
+.liste-cours section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.6em;
+}
+
+.liste-cours section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b4f8c9e1;
+  border: 1px solid #aaa;
+  width: 90%;
+  margin: 1%;
+}
+
+.liste-cours section article p {
+  margin: .4rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.liste-cours section article a {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #81e674;
+}
+
+.liste-cours section article:hover {
+  background-color: #8cdde0;
+}
+
+@media (min-width: 800px) {
+  .liste-cours section article {
+    width: 45%;
+    margin: 1%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .liste-cours section article {
+    width: 29%;
+    margin: 1%;
+  }
+}
+
+#secondary {
+  display: none;
+}
+
+#colophon {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+#colophon .site-info a {
+  text-decoration: none;
+  color: #e7594f;
+}
+
 /* Local/carrousel
 --------------------------------------------- */
 .carrousel {
   display: flex;
   width: 300vw;
   height: 20vh;
+  margin-top: 2em;
   transition: transform .5s;
 }
 
@@ -1148,15 +1251,71 @@ body.home::after {
 }
 
 .carrousel div:nth-of-type(1) {
-  background-color: palegoldenrod;
+  background-color: #ebe6b6;
+}
+
+.carrousel div:nth-of-type(1) p {
+  background-color: white;
+  color: white;
+  padding: 3.6em;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
 .carrousel div:nth-of-type(2) {
-  background-color: palegreen;
+  background-color: #a7e9a7;
+}
+
+.carrousel div:nth-of-type(2) p {
+  background-color: white;
+  color: white;
+  padding: 3.6em;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 }
 
 .carrousel div:nth-of-type(3) {
-  background-color: palevioletred;
+  background-color: #dd88a4;
+}
+
+.carrousel div:nth-of-type(3) p {
+  background-color: white;
+  color: white;
+  padding: 3.6em;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.boutons {
+  display: flex;
+  justify-content: center;
+  padding: 0.2em;
+}
+
+.boutons button {
+  margin: 0.4em;
+  border-radius: 50%;
+  padding: 16px 20px;
+  text-decoration: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+
+.boutons .un:hover {
+  background-color: #ebe6b6;
+  color: white;
+  border: none;
+}
+
+.boutons .deux:hover {
+  background-color: lightgreen;
+  color: white;
+  border: none;
+}
+
+.boutons .trois:hover {
+  background-color: lightpink;
+  color: white;
+  border: none;
 }
 
 /* Local/animation
@@ -1198,5 +1357,144 @@ body.home::after {
   100% {
     opacity: 1;
   }
+}
+
+button {
+  animation: anim-boutons 1.5s both ease-in;
+}
+
+@keyframes anim-boutons {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Local/burger
+------------------------------------------- */
+/* --------------------------------------------------------------------------------------
+Les variables 
+---------------------------------------------------------------------------------------- */
+/*---------------------------------------------------------------------------------------
+Le bouton buger
+----------------------------------------------------------------------------------------- */
+#burger {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#burger div {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#burger div:nth-of-type(1) {
+  background-color: #f0d456;
+  clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+}
+
+#burger div:nth-of-type(2) {
+  background-color: #e7594f;
+  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+}
+
+#burger div:nth-of-type(3) {
+  background-color: #f0755D;
+  clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+}
+
+/* -----------------------------------------------------------------------------------
+La barre du haut
+-------------------------------------------------------------------------------------- */
+@keyframes ouvreX1 {
+  0% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+  }
+  100% {
+    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
+  }
+}
+
+@keyframes fermeX1 {
+  0% {
+    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
+  }
+  100% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+  }
+}
+
+.ouvreX1 {
+  animation: ouvreX1 0.1s both;
+}
+
+.fermeX1 {
+  animation: fermeX1 0.1s both;
+}
+
+/* -----------------------------------------------------------------------------------
+La barre du bas
+-------------------------------------------------------------------------------------- */
+@keyframes ouvreX3 {
+  0% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+  100% {
+    clip-path: polygon(-8% 92%, 92% -8%, 108% 8%, 8% 108%);
+  }
+}
+
+@keyframes fermeX3 {
+  0% {
+    clip-path: polygon(-4% 96%, 96% -4%, 104% 4%, 4% 104%);
+  }
+  100% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+}
+
+.ouvreX3 {
+  animation: ouvreX3 0.1s both;
+}
+
+.fermeX3 {
+  animation: fermeX3 0.1s both;
+}
+
+/* -----------------------------------------------------------------------------------
+La barre du millieu
+-------------------------------------------------------------------------------------- */
+@keyframes ouvreX2 {
+  0% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+  100% {
+    clip-path: polygon(48% 48%, 52% 48%, 52% 52%, 48% 52%);
+  }
+}
+
+@keyframes fermeX2 {
+  0% {
+    clip-path: polygon(48% 48%, 52% 48%, 52% 52%, 48% 52%);
+  }
+  100% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+}
+
+.ouvreX2 {
+  animation: ouvreX2 0.1s both;
+}
+
+.fermeX2 {
+  animation: fermeX2 0.1s both;
 }
 /*# sourceMappingURL=style.css.map */
