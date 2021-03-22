@@ -101,6 +101,7 @@ body.home::after {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 1.6em;
 
         article {
             display: flex;
@@ -124,6 +125,10 @@ body.home::after {
                 text-decoration: none;
                 color: $color__linkarticle;
             }
+        }
+
+        article:hover {
+            background-color: $color__linkarticle-hover;
         }
 
         @include tablet {

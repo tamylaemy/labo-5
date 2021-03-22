@@ -1171,6 +1171,7 @@ body.home::after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 1.6em;
 }
 
 .liste-cours section article {
@@ -1197,6 +1198,10 @@ body.home::after {
   font-weight: bold;
   text-decoration: none;
   color: #81e674;
+}
+
+.liste-cours section article:hover {
+  background-color: #8cdde0;
 }
 
 @media (min-width: 800px) {
