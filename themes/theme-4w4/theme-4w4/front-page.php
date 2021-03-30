@@ -50,15 +50,13 @@ get_header();
 
 			<section>
 				<?php endif ?>
-				<article>
-					<p><?php echo $tPropriete['sigle'] . " - " . $tPropriete['nbHeure'] . " - " . $tPropriete['typeCours']; ?></p>
-					<a href="<?php echo get_permalink() ?>"><?php echo $tPropriete['titrePartiel']; ?></a>
-					<p>Session : <?php echo $tPropriete['session']; ?></p>
-				</article>
+				<?php get_template_part( 'template-parts/content', 'cours-article' ); ?>
 		<?php 
 			$precedent = $tPropriete['typeCours'];
 		endwhile; ?>
 		</section> <!-- fin .cours section -->
+
+		<!-- ajout des cours à la fin ? -->
 		<?php rewind_posts(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<h3>-<?php echo get_the_title(); ?></h3>

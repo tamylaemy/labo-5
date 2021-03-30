@@ -1,12 +1,12 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part l'affichage des bloc de cours dans front-page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package theme-4w4
  */
-
+global $tPropriete
 ?>
 
 <article>
