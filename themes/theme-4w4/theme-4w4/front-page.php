@@ -16,9 +16,17 @@ get_header();
 	<?php 
 		if (is_front_page()) : ?>
 		<section class="carrousel">
-				<div><p>1</p></div>
-				<div><p>2</p></div>
-				<div><p>3</p></div>
+				<article class="slide_conteneur">
+					<div class="slide">
+						<img src="" alt="">
+						<div class="slide__info"></div>
+						<p>582-3W3 - 90h - Web</p>
+						<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/?p=58"></a>
+						<p>Session : 3</p>
+					</div>
+				</article>
+				<article>2</article>
+				<article>3</article>
 		</section>
 		<section class="boutons">
 			<button id='un' class='un'> 1 </button>
