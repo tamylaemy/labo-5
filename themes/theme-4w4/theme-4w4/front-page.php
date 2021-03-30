@@ -55,12 +55,6 @@ get_header();
 			$precedent = $tPropriete['typeCours'];
 		endwhile; ?>
 		</section> <!-- fin .cours section -->
-
-		<!-- ajout des cours à la fin ? -->
-		<?php rewind_posts(); ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-		<h3>-<?php echo get_the_title(); ?></h3>
-		<?php endwhile; ?>
 		<?php endif; ?>
 
 

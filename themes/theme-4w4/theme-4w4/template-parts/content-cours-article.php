@@ -6,7 +6,7 @@
  *
  * @package theme-4w4
  */
-global $tPropriete
+global $tPropriete;
 ?>
 
 <article>
