@@ -5,6 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+	console.log ('debut navigation.js');
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
 	// Return early if the navigation don't exist.
@@ -12,8 +13,8 @@
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
-
+	const button = document.getElementById( 'burger' );
+	console.log (button.id);
 	// Return early if the button don't exist.
 	if ( 'undefined' === typeof button ) {
 		return;
@@ -33,6 +34,7 @@
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
+		console.log('passe');
 		siteNavigation.classList.toggle( 'toggled' );
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
