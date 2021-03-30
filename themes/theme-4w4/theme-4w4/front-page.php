@@ -7,6 +7,8 @@
  * @package theme-4w4
  */
 
+ // code origin
+
 get_header();
 ?>
 	<main id="primary" class="site-main">
