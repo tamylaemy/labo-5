@@ -18,15 +18,34 @@ get_header();
 		<section class="carrousel">
 				<article class="slide_conteneur">
 					<div class="slide">
-						<img src="" alt="">
-						<div class="slide__info"></div>
-						<p>582-3W3 - 90h - Web</p>
-						<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/?p=58"></a>
-						<p>Session : 3</p>
+						<img width="150" height="100" src="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/wp-content/uploads/2021/03/illustration-developpement-web_71609-1327.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy">
+						<div class="slide__info">
+							<p>582-3W3 - 90h - Web</p>
+							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/582-3w3-creation-de-sites-web-dynamiques-90h/">Création de Sites Web Dynamique</a>
+							<p>Session : 3</p>
+						</div>
 					</div>
 				</article>
-				<article>2</article>
-				<article>3</article>
+				<article class="slide_conteneur">
+					<div class="slide">
+						<img src="" alt="">
+						<div class="slide__info">
+							<p>582-3W3 - 90h - Web</p>
+							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/?p=58">2</a>
+							<p>Session : 3</p>
+						</div>
+					</div>
+				</article>
+				<article class="slide_conteneur">
+					<div class="slide">
+						<img src="" alt="">
+						<div class="slide__info">
+							<p>582-3W3 - 90h - Web</p>
+							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/?p=58">3</a>
+							<p>Session : 3</p>
+						</div>
+					</div>
+				</article>
 		</section>
 		<section class="boutons">
 			<button id='un' class='un'> 1 </button>
