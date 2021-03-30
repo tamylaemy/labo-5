@@ -799,6 +799,20 @@ Bouton burger
   display: block;
 }
 
+@media (min-width: 1200px) {
+  .menu-toggle,
+  .main-navigation.toggled ul {
+    display: flex;
+  }
+}
+
+@media (min-width: 800px) {
+  .menu-toggle,
+  .main-navigation.toggled ul {
+    display: flex;
+  }
+}
+
 /* VERSION TABLETTE */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -1490,6 +1504,10 @@ Le bouton buger
   height: 2rem;
   border-radius: 50%;
   overflow: hidden;
+}
+
+#burger .menu-toggle .primary-menu {
+  display: block;
 }
 
 #burger div {

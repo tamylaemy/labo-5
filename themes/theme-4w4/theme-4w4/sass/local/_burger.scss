@@ -16,6 +16,13 @@ Le bouton buger
     // border : 1px solid #aaa;
     border-radius : 50%;
     overflow: hidden;
+
+    .menu-toggle{
+        .primary-menu{ 
+            display: block;
+        }
+    }
+    
     div{
         top: 0;
         left : 0;
