@@ -30,9 +30,9 @@ get_header();
 					<div class="slide">
 						<img src="" alt="">
 						<div class="slide__info">
-							<p>582-3W3 - 90h - Web</p>
-							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/?p=58">2</a>
-							<p>Session : 3</p>
+							<p>582-1M1 - 75h - Spécifique</p>
+							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/description-du-cours-582-1m1-creation-video-2/">Création Vidéo</a>
+							<p>Session : 1</p>
 						</div>
 					</div>
 				</article>
@@ -40,9 +40,9 @@ get_header();
 					<div class="slide">
 						<img src="" alt="">
 						<div class="slide__info">
-							<p>582-3W3 - 90h - Web</p>
-							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/?p=58">3</a>
-							<p>Session : 3</p>
+							<p>582-1J1 - 75h - Jeu</p>
+							<a href="http://localhost/4w4/wordpress-5.6-fr_FR/wordpress/582-1j1-animation-et-interactivite-en-jeu-75h/">Animation et Interactivité en Jeu</a>
+							<p>Session : 1</p>
 						</div>
 					</div>
 				</article>
