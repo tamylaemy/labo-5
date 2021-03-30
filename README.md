@@ -1,3 +1,3 @@
-# exercice2
-GitHub Repository : https://github.com/tamylaemy/exercice2
-GitHub Pages : https://tamylaemy.github.io/exercice2/
+# tp1
+GitHub Repository : https://github.com/tamylaemy/TP1_4W4
+GitHub Pages : https://tamylaemy.github.io/TP1_4W4/
