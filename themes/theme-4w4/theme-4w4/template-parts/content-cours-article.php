@@ -10,7 +10,7 @@
 ?>
 
 <article>
-					<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
-					<a href="<?php echo get_permalink() ?>"><?php echo $titrePartiel; ?></a>
-					<p>Session : <?php echo $session; ?></p>
+					<p><?php echo $tPropriete['sigle'] . " - " . $tPropriete['nbHeure'] . " - " . $tPropriete['typeCours']; ?></p>
+					<a href="<?php echo get_permalink() ?>"><?php echo $tPropriete['titrePartiel']; ?></a>
+					<p>Session : <?php echo $tPropriete['session']; ?></p>
 </article>

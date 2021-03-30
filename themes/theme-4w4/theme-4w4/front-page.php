@@ -40,30 +40,29 @@ get_header();
             $precedent = "XXXXXX";
 			while ( have_posts() ) :
 				the_post();
+				convertirTableau($tPropriete);
 
-                $titre = get_the_title();
-				$sigle = substr($titre, 0, 7);
-				$nbHeure = substr($titre, -4, 3);
-				$titrePartiel = substr($titre, 8, -6);
-                $session = substr($titre, 4,1);
-				$typeCours = get_field('type_de_cours');
-				if ($precedent != $typeCours): ?>
+				if ($precedent != $tPropriete['typeCours']): ?>
 				<?php if ($precedent != "XXXXXX"): ?>
 					</section>
 				<?php endif ?>
-				<h2><?php echo $typeCours; ?></h2>
+				<h2><?php echo $tPropriete['typeCours']; ?></h2>
 
 			<section>
 				<?php endif ?>
 				<article>
-					<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
-					<a href="<?php echo get_permalink() ?>"><?php echo $titrePartiel; ?></a>
-					<p>Session : <?php echo $session; ?></p>
+					<p><?php echo $tPropriete['sigle'] . " - " . $tPropriete['nbHeure'] . " - " . $tPropriete['typeCours']; ?></p>
+					<a href="<?php echo get_permalink() ?>"><?php echo $tPropriete['titrePartiel']; ?></a>
+					<p>Session : <?php echo $tPropriete['session']; ?></p>
 				</article>
 		<?php 
-			$precedent = $typeCours;
+			$precedent = $tPropriete['typeCours'];
 		endwhile; ?>
-		</section> <!-- .cours section -->
+		</section> <!-- fin .cours section -->
+		<?php rewind_posts(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+		<h3>-<?php echo get_the_title(); ?></h3>
+		<?php endwhile; ?>
 		<?php endif; ?>
 
 
@@ -72,3 +71,12 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
+function convertirTableau(&$tPropriete) {
+	$tPropriete['titre'] = get_the_title();
+	$tPropriete['sigle'] = substr($tPropriete['titre'], 0, 7);
+	$tPropriete['nbHeure'] = substr($tPropriete['titre'], -4, 3);
+	$tPropriete['titrePartiel'] = substr($tPropriete['titre'], 8, -6);
+	$tPropriete['session'] = substr($tPropriete['titre'], 4,1);
+	$tPropriete['typeCours'] = get_field('type_de_cours');
+}
